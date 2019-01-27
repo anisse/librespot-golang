@@ -301,10 +301,24 @@ func funcPlay(session *core.Session, trackId string) {
 	// As a demo, select the OGG 160kbps variant of the track. The "high quality" setting in the official Spotify
 	// app is the OGG 320kbps variant.
 	var selectedFile *Spotify.AudioFile
-	for _, file := range track.GetFile() {
-		if file.GetFormat() == Spotify.AudioFile_OGG_VORBIS_160 {
-			selectedFile = file
+	var i int
+	for selectedFile == nil {
+		alt := track.GetAlternative()
+		if len(track.GetFile()) == 0 {
+			if i >= len(alt) {
+				break
+			}
+			track = alt[i]
+			i += 1
 		}
+		for _, file := range track.GetFile() {
+			if file.GetFormat() == Spotify.AudioFile_OGG_VORBIS_160 {
+				selectedFile = file
+			}
+		}
+	}
+	if selectedFile == nil {
+		panic("Could not get selected file")
 	}
 
 	// Synchronously load the track
