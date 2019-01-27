@@ -162,7 +162,9 @@ func (a *AudioFile) Seek(offset int64, whence int) (int64, error) {
 
 // Cancels the current audio file - no further data will be downloaded
 func (a *AudioFile) Cancel() {
+	a.lock.Lock()
 	a.cancelled = true
+	a.lock.Unlock()
 }
 
 func (a *AudioFile) headerOffset() int {
@@ -288,7 +290,10 @@ func (a *AudioFile) loadChunk(chunkIndex int) error {
 }
 
 func (a *AudioFile) loadNextChunk() {
-	if a.cancelled {
+	a.lock.RLock()
+	c := a.cancelled
+	a.lock.RUnlock()
+	if c {
 		return
 	}
 
