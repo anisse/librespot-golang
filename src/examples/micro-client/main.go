@@ -1,21 +1,22 @@
 package main
 
 import (
-	"github.com/librespot-org/librespot-golang/src/Spotify"
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/xlab/portaudio-go/portaudio"
-	"github.com/xlab/vorbis-go/decoder"
 	"io/ioutil"
-	"github.com/librespot-org/librespot-golang/src/librespot"
-	"github.com/librespot-org/librespot-golang/src/librespot/core"
-	"github.com/librespot-org/librespot-golang/src/librespot/utils"
 	"log"
 	"os"
 	"strings"
 	"sync"
 	"unsafe"
+
+	"github.com/anisse/librespot-golang/src/Spotify"
+	"github.com/anisse/librespot-golang/src/librespot"
+	"github.com/anisse/librespot-golang/src/librespot/core"
+	"github.com/anisse/librespot-golang/src/librespot/utils"
+	"github.com/xlab/portaudio-go/portaudio"
+	"github.com/xlab/vorbis-go/decoder"
 )
 
 const (
@@ -295,8 +296,6 @@ func funcPlay(session *core.Session, trackId string) {
 		fmt.Println("Error loading track: ", err)
 		return
 	}
-
-	fmt.Println("Track:", track.GetName())
 
 	// As a demo, select the OGG 160kbps variant of the track. The "high quality" setting in the official Spotify
 	// app is the OGG 320kbps variant.

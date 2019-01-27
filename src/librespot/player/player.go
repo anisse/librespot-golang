@@ -1,14 +1,15 @@
 package player
 
 import (
-	"github.com/librespot-org/librespot-golang/src/Spotify"
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/librespot-org/librespot-golang/src/librespot/connection"
-	"github.com/librespot-org/librespot-golang/src/librespot/mercury"
 	"log"
 	"sync"
+
+	"github.com/anisse/librespot-golang/src/Spotify"
+	"github.com/anisse/librespot-golang/src/librespot/connection"
+	"github.com/anisse/librespot-golang/src/librespot/mercury"
 )
 
 type Player struct {
@@ -17,11 +18,11 @@ type Player struct {
 	seq      uint32
 	audioKey []byte
 
-	chanLock sync.Mutex
+	chanLock    sync.Mutex
 	seqChanLock sync.Mutex
-	channels map[uint16]*Channel
-	seqChans sync.Map
-	nextChan uint16
+	channels    map[uint16]*Channel
+	seqChans    sync.Map
+	nextChan    uint16
 }
 
 func CreatePlayer(conn connection.PacketStream, client *mercury.Client) *Player {
@@ -47,6 +48,9 @@ func (p *Player) LoadTrackWithIdAndFormat(fileId []byte, format Spotify.AudioFil
 
 	// Start loading the audio key
 	err := audioFile.loadKey(trackId)
+	if err != nil {
+		panic("err" + err.Error())
+	}
 
 	// Then start loading the audio itself
 	audioFile.loadChunks()

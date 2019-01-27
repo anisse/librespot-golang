@@ -1,9 +1,9 @@
 package librespotmobile
 
 import (
-	"github.com/librespot-org/librespot-golang/src/Spotify"
-	"github.com/librespot-org/librespot-golang/src/librespot/core"
-	"github.com/librespot-org/librespot-golang/src/librespot/player"
+	"github.com/anisse/librespot-golang/src/Spotify"
+	"github.com/anisse/librespot-golang/src/librespot/core"
+	"github.com/anisse/librespot-golang/src/librespot/player"
 )
 
 // MobilePlayer is a gomobile-compliant subset of the Player struct.

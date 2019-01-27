@@ -4,8 +4,8 @@ github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/golang/protobuf v0.0.0-20171113180720-1e59b77b52bf h1:pFr/u+m8QUBMW/itAczltF3guNRAL7XDs5tD3f6nSD0=
 github.com/golang/protobuf v0.0.0-20171113180720-1e59b77b52bf/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
-github.com/librespot-org/librespot-golang v0.0.0-20181112205641-23bdf13d9bf3 h1:xb+iOLSUtPYwoYDTFdszji9jZ9eGqCbbAmUmN3hRcL0=
-github.com/librespot-org/librespot-golang v0.0.0-20181112205641-23bdf13d9bf3/go.mod h1:p+7XDsra6SFt+S0NW5mwMxRGHUl0vP6/nMWlmxRTKzs=
+github.com/anisse/librespot-golang v0.0.0-20181112205641-23bdf13d9bf3 h1:xb+iOLSUtPYwoYDTFdszji9jZ9eGqCbbAmUmN3hRcL0=
+github.com/anisse/librespot-golang v0.0.0-20181112205641-23bdf13d9bf3/go.mod h1:p+7XDsra6SFt+S0NW5mwMxRGHUl0vP6/nMWlmxRTKzs=
 github.com/miekg/dns v1.0.1 h1:6gt2fR2lfjPZ/wsZZZFEDcJLNW5eZwy1zUDIkyqxDsA=
 github.com/miekg/dns v1.0.1/go.mod h1:W1PPwlIAgtquWBMBEV9nkV9Cazfe8ScdGz/Lj7v3Nrg=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

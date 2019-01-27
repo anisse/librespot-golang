@@ -11,7 +11,7 @@ import (
 	"encoding/json"
 	"errors"
 	"golang.org/x/crypto/pbkdf2"
-	"github.com/librespot-org/librespot-golang/src/librespot/crypto"
+	"github.com/anisse/librespot-golang/src/librespot/crypto"
 	"log"
 	"math/big"
 	"os"

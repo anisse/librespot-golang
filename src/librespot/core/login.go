@@ -1,14 +1,14 @@
 package core
 
 import (
-	"github.com/librespot-org/librespot-golang/src/Spotify"
+	"github.com/anisse/librespot-golang/src/Spotify"
 	"bytes"
 	"encoding/base64"
 	"fmt"
 	"github.com/golang/protobuf/proto"
-	"github.com/librespot-org/librespot-golang/src/librespot/connection"
-	"github.com/librespot-org/librespot-golang/src/librespot/discovery"
-	"github.com/librespot-org/librespot-golang/src/librespot/utils"
+	"github.com/anisse/librespot-golang/src/librespot/connection"
+	"github.com/anisse/librespot-golang/src/librespot/discovery"
+	"github.com/anisse/librespot-golang/src/librespot/utils"
 	"log"
 )
 
